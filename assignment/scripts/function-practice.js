@@ -115,14 +115,20 @@ console.log(sumAll(numbers));
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
 function allPositive(array) {
-//   let positives = [];
-// for (number of array) {
-//   if (number > 0){
-//     return positives.push(number);
-//   }
+  // need an empty array to push in the positive numbers
+  let positiveNumbers = [];
+  for (let number of array) {
+    // console.log('number', number);
+    if(number > 0) {
+      positiveNumbers.push(number);
+    }
+  }
+  return positiveNumbers;
 }
-// return [];
-// }console.log(allPositive([3,-5,6,0,-23]))
+let exampleNumbers = [-4, 10, 2, 0, -100, 4];
+let resultNumber = allPositive(exampleNumbers);
+console.log('resultNumber', resultNumber)
+console.log(allPositive([-2,-3,-4]));
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
